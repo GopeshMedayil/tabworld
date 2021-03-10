@@ -1,15 +1,13 @@
-import React from 'react';
-import logo from '../../assets/img/logo.svg';
-import Greetings from '../../containers/Greetings/Greetings';
-import './Popup.css';
+import logo from './logo.svg';
+import './App.css';
 
-const Popup = () => {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/pages/Popup/Popup.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -22,6 +20,6 @@ const Popup = () => {
       </header>
     </div>
   );
-};
+}
 
-export default Popup;
+export default App;
