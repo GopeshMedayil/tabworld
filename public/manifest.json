@@ -3,10 +3,7 @@
   "name": "My Tab",
   "author": "Gopesh Gopinath",
   "version": "1.0",
-  "description": "",
-  "icons": {
-    "16": "logo192.png"
-  },
+  "description": "test desc",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
