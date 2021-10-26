@@ -9,6 +9,7 @@ const reducer = combineReducers({
 const persistedState = loadState();
 
 const store = createStore(reducer, persistedState);
+
 console.log("Actual state ", store.getState());
 store.subscribe(() => {
   saveState(store.getState());

@@ -3,13 +3,13 @@ import Moment from "react-moment";
 import "moment-timezone";
 import { useSelector, useDispatch } from "react-redux";
 import { loadTimes } from '../redux/timeZoneReducer';
-import { addClock } from '../redux/actions'
+import { addClock } from '../redux/actions';
+import Modal from './Modal'
 function WorldClock() {
     const dispatch = useDispatch();
     const [currentTime, setCurrentTime] = useState(Date.now());
     const timezoneData = useSelector((state) => {
         // console.log("inside use slector", state.timeZones.tzs);
-
         return state.timeZones.tzs
     });
 
@@ -31,6 +31,7 @@ function WorldClock() {
     return (
         <div>
             <h2>Clock</h2>
+            <Modal></Modal>
             <button onClick={() => dispatch(addClock({
                 id: 1000,
                 name: "Test",
