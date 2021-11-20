@@ -1,10 +1,12 @@
 import { combineReducers, createStore } from "redux";
 import timeZones from "./timeZoneReducer";
+import modalReducer from "./modalReducer";
 import { loadState, saveState } from "./localStorage";
 
 
 const reducer = combineReducers({
-  timeZones
+  timeZones,
+  modalReducer
 });
 const persistedState = loadState();
 
