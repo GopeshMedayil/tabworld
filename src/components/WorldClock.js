@@ -36,7 +36,8 @@ function WorldClock() {
                 tz: "Europe/Berlin"
             }))}>Add Clock</button> */}
             <button onClick={() => dispatch(showModal({
-                showModal: true
+                showModal: true,
+                modalType: "addClock"
             }))}>Add</button>
             {listItems}
         </div>

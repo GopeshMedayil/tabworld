@@ -3,14 +3,13 @@ const initialState = {
   showModal: false
 };
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (state = initialState, action) => {
+export default (state = initialState, action,) => {
   switch (action.type) {
     case 'SHOW_MODAL':
-      console.log("in shpw modal")
-
+      console.log("in show modal action", action)
       return {
-        ...state,
-        showModal: true
+        showModal: true,
+        modalType: action.payload.modalType
       }
     case 'HIDE_MODAL':
       return {

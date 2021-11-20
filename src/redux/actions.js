@@ -9,11 +9,15 @@ export function addClock(clockData) {
     };
 }
 
-export function showModal() {
-    console.log("showModal clickedS")
+export function showModal(obj) {
+    console.log("showModal clickedS", obj)
     return {
         type: 'SHOW_MODAL',
-        showModal: true
+        payload: {
+            showModal: true,
+            modalType: obj.modalType
+        }
+
     };
 }
 
