@@ -2,8 +2,6 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/actions";
 
-
-
 function ToDo() {
 
     const { register, handleSubmit, reset } = useForm();

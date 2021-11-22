@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import moment from 'moment-timezone';
 import { addClock } from '../redux/actions';
 
-
-
 function AddClockForm() {
 
     const { register, handleSubmit } = useForm();
