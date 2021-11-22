@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const ADD_CLOCK = "ADD_CLOCK";
 export function addClock(clockData) {
@@ -26,5 +25,28 @@ export function hideModal() {
     return {
         type: 'HIDE_MODAL',
         showModal: false
+    };
+}
+
+
+/**
+ * Method to add a new todo
+ * @param {*} todo 
+ * @returns 
+ */
+export function addTodo(todo) {
+    return {
+        type: 'ADD_TODO',
+        payload: todo
+    };
+}
+/**
+ * 
+ */
+
+export function deleteTodo(id) {
+    return {
+        type: 'DELETE_TODO',
+        payload: id
     };
 }

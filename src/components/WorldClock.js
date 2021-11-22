@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import Moment from "react-moment";
 import "moment-timezone";
 import { useSelector, useDispatch } from "react-redux";
-import { loadTimes } from '../redux/timeZoneReducer';
-import { addClock, showModal } from '../redux/actions';
+import { showModal } from '../redux/actions';
 function WorldClock() {
     const dispatch = useDispatch();
     const [currentTime, setCurrentTime] = useState(Date.now());

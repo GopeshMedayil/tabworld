@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import moment from 'moment-timezone';
@@ -8,7 +8,7 @@ import { addClock } from '../redux/actions';
 
 function AddClockForm() {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
     const timezones = moment.tz.names().map(function (timezone) {
         return <option key={timezone} value={timezone}>{timezone}</option>
