@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTodo } from '../redux/actions';
+import { deleteTodo, toggleTodo } from '../redux/actions';
 
 function TodoList() {
     const dispatch = useDispatch();
@@ -12,11 +12,17 @@ function TodoList() {
 
     }
 
+    const toggleTodoItem = (id) => {
+        console.log('toggleTodo', id);
+        dispatch(toggleTodo(id));
+
+    }
+
     return (
         <div>
             Todolist
             {todos.map(todo => {
-                return <div key={todo.id}><div >{todo.title} <button onClick={() => deleteTodoItem(todo.id)}>Delete</button></div></div>
+                return <div key={todo.id}><div onClick={() => toggleTodoItem(todo.id)}>{todo.title}--{todo.completed ? "true" : "false"}</div> <button onClick={() => deleteTodoItem(todo.id)}>Delete</button></div>
             })}
         </div>
     )

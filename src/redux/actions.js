@@ -50,3 +50,15 @@ export function deleteTodo(id) {
         payload: id
     };
 }
+
+/**
+ * Method to toggle the todo
+ * @param {*} id 
+ * @returns 
+ */
+export function toggleTodo(id) {
+    return {
+        type: 'TOGGLE_TODO',
+        payload: id
+    };
+}
