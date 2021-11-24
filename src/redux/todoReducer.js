@@ -10,7 +10,7 @@ export default function todoReducer(state = initialState, action) {
                 ...state,
                 todos: [...state.todos, action.payload]
             }
-        case 'REMOVE_TODO':
+        case 'DELETE_TODO':
             return {
                 ...state,
                 todos: state.todos.filter(todo => todo.id !== action.payload)

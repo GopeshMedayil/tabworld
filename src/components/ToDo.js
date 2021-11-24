@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/actions";
+import TodoList from "./TodoList";
 
 function ToDo() {
 
@@ -29,6 +30,7 @@ function ToDo() {
                     <input  {...register("name")} />
                     <button>Add</button>
                 </form>
+                <TodoList />
             </div>
 
         </div>
