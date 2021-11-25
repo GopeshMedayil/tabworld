@@ -9,11 +9,8 @@ function AddBookmarkForm() {
     const dispatch = useDispatch();
 
     const onSubmit = (data) => {
-        console.log(data);
         dispatch(addBookmark(data));
-
     }
-
     return (
         <React.Fragment>
             <form onSubmit={handleSubmit(onSubmit)}>
