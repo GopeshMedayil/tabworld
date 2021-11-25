@@ -3,6 +3,8 @@ import './Modal.css';
 import { hideModal } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import AddClockForm from './AddClockForm';
+import BookMark from './Bookmark';
+import AddBookmarkForm from './AddBookmarkForm';
 
 const Modal = (props) => {
     const onCloseButtonClick = (e) => {
@@ -22,7 +24,7 @@ const Modal = (props) => {
                     <span className="modal-close" onClick={onCloseButtonClick}>
                         &#10005; {/* HTML code for a multiplication sign */}
                     </span>
-                    {modalState.modalType === 'addClock' ? <AddClockForm /> : <div>Modal</div>}
+                    {modalState.modalType === 'addClock' ? <AddClockForm /> : <div><AddBookmarkForm></AddBookmarkForm></div>}
                 </div>
             </div>
 

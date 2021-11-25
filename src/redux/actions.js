@@ -62,3 +62,16 @@ export function toggleTodo(id) {
         payload: id
     };
 }
+
+/**
+ * Method to add a new bookmark
+ * @param {*} bookmark 
+ * @returns 
+ */
+export function addBookmark(bookmark) {
+    console.log("inside bookmark action")
+    return {
+        type: 'ADD_BOOKMARK',
+        payload: bookmark
+    };
+}
