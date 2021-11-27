@@ -18,7 +18,11 @@ export default function App() {
             <NavBar></NavBar>
           </div>
           <div className="col-md-7">
-            <div className="m-2 border">Body</div>
+            <div className="m-2 border">
+              <div className="main-body">
+                Body
+              </div>
+            </div>
 
           </div>
           <div className="col-md-3  ">

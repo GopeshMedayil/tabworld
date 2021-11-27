@@ -25,13 +25,21 @@ function AddClockForm() {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
-                <input {...register("name")} />
-                <input type="hidden" defaultValue={Date.now()} {...register('id')} />
-                <select {...register("tz")}>
-                    {timezones}
-                </select>
-                <input type="submit" />
+                <div class="mb-2 col-md-12">
+                    <label for="label" className="form-label">Label</label>
+                    <input className="form-control" {...register("name")} autoComplete="off" />
+                    <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+                </div>
+                <div class="mb-4 col-md-12">
+                    <label for="timezone" className="form-label">Timezone</label>
+                    <select className="form-control" {...register("tz")}>
+                        {timezones}
+                    </select>
+                </div>
+
+                <input type="submit" className="btn btn-primary" />
             </form>
+
         </div>
     )
 }

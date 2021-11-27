@@ -17,3 +17,7 @@
     border-radius: 2px;
     padding: 12px 16px;
   }
+  .modal-close{
+    float:right;
+    cursor: pointer;
+  }
