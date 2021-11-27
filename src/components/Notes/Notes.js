@@ -1,7 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { addNotes } from '../redux/actions';
+import { addNotes } from "../../redux/actions";
+import NotesList from './NotesList';
 
 function Notes() {
 
@@ -20,6 +21,7 @@ function Notes() {
                 <input type="hidden" defaultValue={Date.now()} {...register('id')} />
                 <button>Add Note</button>
             </form>
+            <NotesList></NotesList>
 
         </React.Fragment>
     )

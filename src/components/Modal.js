@@ -3,7 +3,6 @@ import './Modal.css';
 import { hideModal } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import AddClockForm from './AddClockForm';
-import BookMark from './Bookmark';
 import AddBookmarkForm from './AddBookmarkForm';
 
 const Modal = (props) => {

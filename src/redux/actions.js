@@ -87,4 +87,17 @@ export function addNotes(notes) {
         type: 'ADD_NOTES',
         payload: notes
     };
+};
+
+/**
+ * Action to remove the notes
+ * @param {*} id 
+ * @returns 
+ */
+
+export function deleteNote(id) {
+    return {
+        type: 'DELETE_NOTE',
+        payload: id
+    };
 }

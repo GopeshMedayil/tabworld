@@ -8,7 +8,7 @@ export function notesReducer(state = initialState, action) {
             return {
                 notes: [...state.notes, action.payload]
             };
-        case 'DELETE_NOTES':
+        case 'DELETE_NOTE':
             return {
                 notes: state.notes.filter(note => note.id !== action.payload)
             }
