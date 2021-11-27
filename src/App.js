@@ -4,6 +4,7 @@ import ToDo from './components/ToDo';
 import BookMark from './components/Bookmark';
 import Notes from './components/Notes/Notes';
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-2 ">
-            Navigation
+            <NavBar></NavBar>
           </div>
           <div className="col-md-7">
             <div className="m-2 border">Body</div>

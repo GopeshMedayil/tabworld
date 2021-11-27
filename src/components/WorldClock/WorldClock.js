@@ -34,9 +34,9 @@ function WorldClock() {
         //         </Moment>
         //     </div>
         // </div >
-        <div className="card1">
+        <div key={tz.id} className="card1">
             <div className="test-left">
-                <h7 className="card-title text-primary">{tz.name}</h7>
+                <p className="card-title text-primary">{tz.name}</p>
                 <p className="card-subtitle mb-2 text-muted">{tz.tz}</p>
             </div>
             <div className="text-right">
