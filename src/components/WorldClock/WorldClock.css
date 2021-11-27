@@ -1,0 +1,54 @@
+
+.card1{
+    
+    margin: 0.6rem;
+    height:10vh;
+    background-color: white;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+
+}
+
+.card1 div{
+    align-items: center;
+    padding: 0.5rem;
+}
+
+
+.card1:hover{
+    background-color:white;
+}
+
+.add-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card-name{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background: darkviolet;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+.clock-title{
+    text-align: center;
+    padding: 10px;
+    width: 255px;
+}
+.clock-add{
+    font-size: 25px;
+    padding:5px;
+    cursor: pointer;
+}
+
+

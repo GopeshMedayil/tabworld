@@ -2,7 +2,7 @@ import React from 'react';
 import './Modal.css';
 import { hideModal } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
-import AddClockForm from './AddClockForm';
+import AddClockForm from '../components/WorldClock/AddClockForm';
 import AddBookmarkForm from './AddBookmarkForm';
 
 const Modal = (props) => {
@@ -18,8 +18,8 @@ const Modal = (props) => {
     console.log("modalState", modalState)
     if (modalState.showModal) {
         return (
-            <div className="modal-overlay">
-                <div className="modal">
+            <div className="modal-overlay1">
+                <div className="modal1">
                     <span className="modal-close" onClick={onCloseButtonClick}>
                         &#10005; {/* HTML code for a multiplication sign */}
                     </span>
