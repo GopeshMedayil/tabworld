@@ -75,3 +75,16 @@ export function addBookmark(bookmark) {
         payload: bookmark
     };
 }
+
+/**
+ * Action to handle the addition of notes
+ * @param {*} notes 
+ * @returns 
+ */
+export function addNotes(notes) {
+    console.log("inside notes action")
+    return {
+        type: 'ADD_NOTES',
+        payload: notes
+    };
+}
