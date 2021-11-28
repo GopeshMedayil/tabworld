@@ -9,21 +9,36 @@ function Notes() {
     const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
     const onSubmit = (data) => {
-        console.log("Notes", data)
+        console.log("Notes", data);
+        data.id = Date.now();
+        data.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
         dispatch(addNotes(data));
     }
 
     return (
         <React.Fragment>
-            <h1>Notes</h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input  {...register("note")} />
-                <input type="hidden" defaultValue={Date.now()} {...register('id')} />
-                <button>Add Note</button>
-            </form>
-            <NotesList></NotesList>
+            <div className="container">
+                <h4 className="text-center text-muted p-2">Draft your ideas here !!</h4>
+                <div className="row align-items-end">
 
-        </React.Fragment>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+
+                        <div className="input-group mb-3">
+                            <textarea className="form-control" {...register("note", { required: true, maxLength: 80 })} />
+                            {/* <input className="form-control" {...register("note")} placeholder="Type your ideas!!" /> */}
+                            <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+
+                            <button className="btn btn-primary" type="submit" >Add Note</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <NotesList></NotesList>
+            </div>
+
+        </React.Fragment >
     )
 };
 

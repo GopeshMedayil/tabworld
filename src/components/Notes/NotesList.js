@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteNote } from '../../redux/actions';
+import './Notes.css';
 
 function NotesList() {
 
@@ -13,13 +14,26 @@ function NotesList() {
     }
     return (
         <React.Fragment>
-            <h1>Notes List</h1>
-            <ul>
+            <div className="notes-container" >
                 {notes.map(note => (
-                    <li key={note.id}>{note.note} <button onClick={() => removeNote(note.id)}>X</button></li>
+
+                    <div key={note.id} className="item" style={{ "background": note.color }}>
+                        {/* <div className="delete-btn"> */}
+                        {/* <button type="button" onClick={() => removeNote(note.id)} class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> */}
+                        <i class="bi bi-x-lg float-end px-2" onClick={() => removeNote(note.id)}></i>
+                        {/* <button onClick={() => removeNote(note.id)}>X</button> */}
+                        {/* </div> */}
+                        <div className="p-2">
+                            {note.note}
+                        </div>
+
+                    </div>
+
                 ))}
-            </ul>
-        </React.Fragment>
+            </div>
+        </React.Fragment >
     )
 }
 

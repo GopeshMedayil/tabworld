@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <section className="header">
-        Header
+        Tab World
       </section>
       <div className="container-fluid">
         <div className="row">
@@ -22,8 +22,8 @@ export default function App() {
           <div className="col-md-7">
             <div className="m-2 border">
               <div className="main-body">
-                Body
                 <Routes>
+                  <Route path="/" element={<Notes />} />
                   <Route path="/todo" element={<ToDo />} />
                   <Route path="/notes" element={<Notes />} />
                   <Route path="/bookmark" element={<BookMark />} />
