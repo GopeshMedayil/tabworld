@@ -5,7 +5,7 @@ import BookMark from './components/Bookmark';
 import Notes from './components/Notes/Notes';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 export default function App() {
