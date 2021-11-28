@@ -16,10 +16,12 @@
   }
 
   .header{
-    background: #c998a0;
-    margin:5px;
     padding:5px;
-    height:10vh
+    height:40px ;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 5px solid #a177b3;
   }
   div.column{
     padding: 10px;

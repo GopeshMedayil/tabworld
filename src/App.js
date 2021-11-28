@@ -5,6 +5,8 @@ import BookMark from './components/Bookmark';
 import Notes from './components/Notes/Notes';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 export default function App() {
   return (
@@ -21,6 +23,11 @@ export default function App() {
             <div className="m-2 border">
               <div className="main-body">
                 Body
+                <Routes>
+                  <Route path="/todo" element={<ToDo />} />
+                  <Route path="/notes" element={<Notes />} />
+                  <Route path="/bookmark" element={<BookMark />} />
+                </Routes>
               </div>
             </div>
 

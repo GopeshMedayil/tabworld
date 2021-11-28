@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { BrowserRouter } from "react-router-dom";
+
 
 import Modal from './components/Modal';
 
@@ -15,8 +17,10 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Modal></Modal>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
 
-      <App />
 
     </Provider>
   </React.StrictMode>,

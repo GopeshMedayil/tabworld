@@ -3,31 +3,33 @@
  * @returns 
  */
 
-import './NavBar.css'
+import './NavBar.css';
+import { Link } from 'react-router-dom'
 
 function NavBar() {
     return (
         <div className="navbar-vertical">
-            <div className="navbar-item ">
-                <a className="active" href="#">
+            <Link to="/todo" style={{ padding: 5 }}>
+                <div className="navbar-item ">
                     <i class="bi bi-check2-square"></i>
-                </a>
-                <p>Todo</p>
-            </div>
-
-            <div className="navbar-item border  nav-bookmark">
-                <a className="active" href="#">
+                    {/* <a className="active" href="#">
+                    <i class="bi bi-check2-square"></i>
+                </a> */}
+                    <p>Todo</p>
+                </div>
+            </Link>
+            <Link to="/bookmark">
+                <div className="navbar-item border nav-bookmark">
                     <i class="bi bi-bookmarks"></i>
-                </a>
-                <p>Bookmark</p>
-            </div>
-            <div className="navbar-item  nav-notes">
-                <a className="active" href="#">
+                    <p>Bookmark</p>
+                </div>
+            </Link>
+            <Link to="/notes">
+                <div className="navbar-item nav-notes">
                     <i class="bi bi-stickies"></i>
-                </a>
-                <p>Notes</p>
-            </div>
-
+                    <p>Notes</p>
+                </div>
+            </Link>
         </div >
     )
 }
