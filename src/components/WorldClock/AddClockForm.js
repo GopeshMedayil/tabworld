@@ -1,16 +1,23 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import moment from 'moment-timezone';
 import { addClock } from '../../redux/actions';
+import Select from 'react-select'
+
 
 function AddClockForm() {
 
     const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
+    const methods = useForm();
     const timezones = moment.tz.names().map(function (timezone) {
-        return <option key={timezone} value={timezone}>{timezone}</option>
+        return {
+            label: timezone,
+            value: timezone
+        }
     });
+    //console.log("timezone", timezones)
     /**
      * Method to submit the add clock form
      * @param {*} data 
@@ -20,6 +27,11 @@ function AddClockForm() {
         dispatch(addClock(data));
 
     }
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' }
+    ]
 
     return (
         <div>
@@ -32,9 +44,22 @@ function AddClockForm() {
                 </div>
                 <div class="mb-4 col-md-12">
                     <label for="timezone" className="form-label">Timezone</label>
-                    <select className="form-control" {...register("tz")}>
+                    {/* <Select options={options} {...register("tz")} /> */}
+                    <Controller
+                        control={methods.control}
+                        name="tz"
+                        render={({ onChange, value, name, ref }) => (
+                            <Select
+                                inputRef={ref}
+                                classNamePrefix="addl-class"
+                                options={timezones}
+                                value={timezones.find(c => c.value === value)}
+                            />
+                        )}
+                    />
+                    {/* <select className="form-control" {...register("tz")}>
                         {timezones}
-                    </select>
+                    </select> */}
                 </div>
 
                 <input type="submit" className="btn btn-primary" />

@@ -13,13 +13,15 @@ function AddBookmarkForm() {
     }
     return (
         <React.Fragment>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                {/* register your input into the hook by invoking the "register" function */}
-                <input {...register("name")} />
-                <input type="hidden" defaultValue={Date.now()} {...register('id')} />
-                <input {...register("url")} />
-                <input type="submit" />
-            </form>
+            <div style={{ "width": "500px" }}>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    {/* register your input into the hook by invoking the "register" function */}
+                    <input {...register("name")} />
+                    <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+                    <input {...register("url")} />
+                    <input type="submit" />
+                </form>
+            </div>
         </React.Fragment>
     )
 }
