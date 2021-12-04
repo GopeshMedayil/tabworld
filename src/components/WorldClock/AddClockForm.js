@@ -8,7 +8,7 @@ import Select from 'react-select'
 
 function AddClockForm() {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const dispatch = useDispatch();
     const methods = useForm();
     const timezones = moment.tz.names().map(function (timezone) {
@@ -24,6 +24,8 @@ function AddClockForm() {
      */
     const onSubmit = (data) => {
         console.log(data);
+        console.log("errors", errors)
+
         dispatch(addClock(data));
 
     }
@@ -37,23 +39,27 @@ function AddClockForm() {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
-                <div class="mb-2 col-md-12">
-                    <label for="label" className="form-label">Label</label>
-                    <input className="form-control" {...register("name")} autoComplete="off" />
+                <div className="mb-2 col-md-12">
+                    <label for="label" className="form-label">Name</label>
+
+                    <input className="form-control"  {...register("timezone", { required: true })} autoComplete="off" />
                     <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+                    {errors.timezone?.type === 'required' && <span className="text-danger">TIme zone name is required</span>}
                 </div>
-                <div class="mb-4 col-md-12">
+                <div className="mb-4 col-md-12">
                     <label for="timezone" className="form-label">Timezone</label>
                     {/* <Select options={options} {...register("tz")} /> */}
                     <Controller
                         control={methods.control}
                         name="tz"
+                        rules={{ required: true }}
                         render={({ onChange, value, name, ref }) => (
                             <Select
                                 inputRef={ref}
                                 classNamePrefix="addl-class"
                                 options={timezones}
-                                value={timezones.find(c => c.value === value)}
+                                value={timezones.find(tz => tz.value === value)}
+                                defaultValue={timezones[0]}
                             />
                         )}
                     />
