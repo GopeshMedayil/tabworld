@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/actions";
 import TodoList from "../Todo/TodoList";
+import "./Todo.css"
 
 function ToDo() {
 
@@ -23,18 +24,27 @@ function ToDo() {
     };
     return (
         <div>
-            Todo
-            <div >
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="todo-container">
-                        <input className="form-control" {...register("name")} />
+            <div className="todo-container">
+                <div className="todo-form">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input className="form-control" placeholder="Add your new todo" {...register("name")} />
                         <input type="hidden" defaultValue={Date.now()} {...register('id')} />
                         <button>+</button>
+                    </form>
+                </div>
+                <div className="todo-list">
+                    <TodoList />
+                </div>
 
-                    </div>
-                </form>
-                <TodoList />
             </div>
+
+            {/* <form onSubmit={handleSubmit(onSubmit)}>
+                    <input className="form-control" {...register("name")} />
+                    <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+                    <button>+</button> 
+                   
+                </form> 
+                {/* <TodoList /> */}
 
         </div >
     )
