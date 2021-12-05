@@ -1,14 +1,13 @@
 {
-  "manifest_version": 2,
-  "name": "My Tab",
+  "manifest_version": 3,
+  "name": "Tab world",
   "author": "Gopesh Gopinath",
   "version": "1.0",
-  "description": "test desc",
+  "description": "Chrome extension for all daily tasks",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "permissions": [
     "storage"
-  ],
-  "content_security_policy": "script-src 'self' 'sha256-i8PZ2oVUGlSffM9PwxKbSPuK6CUjMUlAr29xRH1xzXM='; object-src 'self'"
+  ]
 }
