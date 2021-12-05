@@ -36,7 +36,7 @@ function WorldClock() {
         // </div >
         <div key={tz.id} className="card1">
             <div className="test-left">
-                <p className="card-title text-primary">{tz.name}</p>
+                <p className="card-title text-primary">{tz.timezone}</p>
                 <p className="card-subtitle mb-2 text-muted">{tz.tz}</p>
             </div>
             <div className="text-right">

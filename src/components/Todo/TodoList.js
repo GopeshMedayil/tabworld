@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTodo, toggleTodo } from '../redux/actions';
+import { deleteTodo, toggleTodo } from '../../redux/actions';
 
 function TodoList() {
+
     const dispatch = useDispatch();
     const todos = useSelector(state => state.todoReducer.todos);
     console.log('todos', todos);

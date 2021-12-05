@@ -8,9 +8,8 @@ import Select from 'react-select'
 
 function AddClockForm() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, control, formState: { errors } } = useForm();
     const dispatch = useDispatch();
-    const methods = useForm();
     const timezones = moment.tz.names().map(function (timezone) {
         return {
             label: timezone,
@@ -25,40 +24,37 @@ function AddClockForm() {
     const onSubmit = (data) => {
         console.log(data);
         console.log("errors", errors)
-
         dispatch(addClock(data));
 
     }
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-    ]
 
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
                 <div className="mb-2 col-md-12">
-                    <label for="label" className="form-label">Name</label>
+                    <label htmlFor="label" className="form-label">Name</label>
 
                     <input className="form-control"  {...register("timezone", { required: true })} autoComplete="off" />
                     <input type="hidden" defaultValue={Date.now()} {...register('id')} />
-                    {errors.timezone?.type === 'required' && <span className="text-danger">TIme zone name is required</span>}
+                    {errors.timezone?.type === 'required' && <span className="text-danger">Time zone name is required</span>}
                 </div>
                 <div className="mb-4 col-md-12">
-                    <label for="timezone" className="form-label">Timezone</label>
+                    <label htmlFor="timezone" className="form-label">Timezone</label>
                     {/* <Select options={options} {...register("tz")} /> */}
                     <Controller
-                        control={methods.control}
+                        control={control}
+                        register={"tz"}
                         name="tz"
-                        rules={{ required: true }}
-                        render={({ onChange, value, name, ref }) => (
+                        render={({ field: { onChange, value, name, ref } }) => (
                             <Select
                                 inputRef={ref}
                                 classNamePrefix="addl-class"
                                 options={timezones}
-                                value={timezones.find(tz => tz.value === value)}
+                                value={timezones.find(c => c.value === value)}
+                                onChange={(selectedOption) => {
+                                    onChange(selectedOption.value);
+                                }}
                                 defaultValue={timezones[0]}
                             />
                         )}

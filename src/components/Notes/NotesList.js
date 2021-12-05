@@ -19,10 +19,10 @@ function NotesList() {
 
                     <div key={note.id} className="item" style={{ "background": note.color }}>
                         {/* <div className="delete-btn"> */}
-                        {/* <button type="button" onClick={() => removeNote(note.id)} class="close" aria-label="Close">
+                        {/* <button type="button" onClick={() => removeNote(note.id)} className="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button> */}
-                        <i class="bi bi-x-lg float-end px-2" onClick={() => removeNote(note.id)}></i>
+                        <i className="bi bi-x-lg float-end px-2" onClick={() => removeNote(note.id)}></i>
                         {/* <button onClick={() => removeNote(note.id)}>X</button> */}
                         {/* </div> */}
                         <div className="p-2">

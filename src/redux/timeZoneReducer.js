@@ -8,12 +8,12 @@ const initialState = {
   tzs: [
     {
       id: 1,
-      name: "Brussels",
+      timezone: "Brussels",
       tz: "Europe/Berlin"
     },
     {
       id: 2,
-      name: 'Australia',
+      timezone: 'Australia',
       tz: "Australia/Sydney"
     }
   ]
