@@ -50,6 +50,11 @@
 
 }
 
+.todo-item >div{
+    flex-grow: 1;
+    /* border:1px solid blue; */
+}
+
 
 
 .todo-item button{

@@ -25,8 +25,13 @@ function TodoList() {
             {todos.map(todo => {
                 return (
                     <div key={todo.id} className="todo-item">
-                        <div className="todo-text" onClick={() => toggleTodoItem(todo.id)}>{todo.title}</div>
-                        <div className="todo-delete"><button onClick={() => deleteTodoItem(todo.id)}>X</button></div>
+
+                        <div className="todo-text d-inline-flex" onClick={() => toggleTodoItem(todo.id)}>
+
+                            <div><input type="checkbox" className="form-check-input" name="completed" /></div>
+                            <div className="ps-1">{todo.title}</div>
+                        </div>
+                        <div className="todo-delete text-end"><button onClick={() => deleteTodoItem(todo.id)}>X</button></div>
                     </div>
                 );
             })}
