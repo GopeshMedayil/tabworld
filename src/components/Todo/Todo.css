@@ -75,3 +75,12 @@
 .todo-text{
     min-height: 35px;
 }
+.todo-count{
+    text-align: center;
+}
+.todo-number{
+    width:20px;
+    height:20px;
+    color:green;
+    padding:10px;
+}

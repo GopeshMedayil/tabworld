@@ -32,6 +32,10 @@ function ToDo() {
                         <button>+</button>
                     </form>
                 </div>
+                <div className="todo-count">
+                    <span className="todo-number">0</span>
+                    <span className="text-muted">Tasks left</span>
+                </div>
                 <div className="todo-list">
                     <TodoList />
                 </div>

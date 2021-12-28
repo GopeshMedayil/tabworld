@@ -14,9 +14,14 @@ function TodoList() {
 
     }
 
-    const toggleTodoItem = (id) => {
-        console.log('toggleTodo', id);
+    const toggleTodoItem = (event, id) => {
+        console.log('toggleTodo', event.target.checked, id);
         dispatch(toggleTodo(id));
+
+    }
+
+    const onChangeCompleted = (data) => {
+        console.log('onChangeCompleted', data);
 
     }
 
@@ -25,11 +30,10 @@ function TodoList() {
             {todos.map(todo => {
                 return (
                     <div key={todo.id} className="todo-item">
-
-                        <div className="todo-text d-inline-flex" onClick={() => toggleTodoItem(todo.id)}>
-
-                            <div><input type="checkbox" className="form-check-input" name="completed" /></div>
-                            <div className="ps-1">{todo.title}</div>
+                        <div className="todo-text d-inline-flex">
+                            <div><input type="checkbox" className="form-check-input" defaultChecked={todo.completed}
+                                disabled={todo.completed} name="completed" onChange={(e) => toggleTodoItem(e, todo.id)} /></div>
+                            <div className={`ps-1  ${todo.completed ? "text-decoration-line-through" : ''}`}>{todo.title}</div>
                         </div>
                         <div className="todo-delete text-end"><button onClick={() => deleteTodoItem(todo.id)}>X</button></div>
                     </div>
