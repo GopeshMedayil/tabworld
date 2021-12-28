@@ -10,7 +10,7 @@ function NavBar() {
     return (
         <div className="navbar-vertical">
             <Link to="/todo" style={{ padding: 5 }}>
-                <div className="navbar-item ">
+                <div className="navbar-item">
                     <i className="bi bi-check2-square"></i>
                     {/* <a className="active" href="#">
                     <i className="bi bi-check2-square"></i>

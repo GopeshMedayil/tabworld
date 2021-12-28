@@ -2,8 +2,9 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo, toggleTodo } from '../../redux/actions';
 
-function TodoList() {
+function TodoList(props) {
 
+    console.log("props", props)
     const dispatch = useDispatch();
     const todos = useSelector(state => state.todoReducer.todos);
     console.log('todos', todos);
@@ -11,12 +12,14 @@ function TodoList() {
     const deleteTodoItem = (id) => {
         console.log('deleteTodo', id);
         dispatch(deleteTodo(id));
+        props.todo();
 
     }
 
     const toggleTodoItem = (event, id) => {
         console.log('toggleTodo', event.target.checked, id);
         dispatch(toggleTodo(id));
+        props.todo();
 
     }
 

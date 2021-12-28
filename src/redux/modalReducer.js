@@ -17,9 +17,6 @@ export default (state = initialState, action,) => {
         showModal: false
       }
     default:
-      return {
-        state,
-        modal: false
-      }
+      return state;
   }
 };
