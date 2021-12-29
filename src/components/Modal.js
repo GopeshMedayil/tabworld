@@ -3,7 +3,7 @@ import './Modal.css';
 import { hideModal } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import AddClockForm from '../components/WorldClock/AddClockForm';
-import AddBookmarkForm from './AddBookmarkForm';
+import AddBookmarkForm from '../components/Bookmark/AddBookmarkForm';
 
 const Modal = (props) => {
     const onCloseButtonClick = (e) => {

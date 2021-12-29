@@ -9,10 +9,12 @@ function TodoList(props) {
     const todos = useSelector(state => state.todoReducer.todos);
     console.log('todos', todos);
 
-    const deleteTodoItem = (id) => {
-        console.log('deleteTodo', id);
-        dispatch(deleteTodo(id));
-        props.todo();
+    const deleteTodoItem = (todo) => {
+        console.log('deleteTodo', todo);
+        dispatch(deleteTodo(todo.id));
+        if (todo.completed === false) {
+            props.todo();
+        }
 
     }
 
@@ -38,7 +40,7 @@ function TodoList(props) {
                                 disabled={todo.completed} name="completed" onChange={(e) => toggleTodoItem(e, todo.id)} /></div>
                             <div className={`ps-1  ${todo.completed ? "text-decoration-line-through" : ''}`}>{todo.title}</div>
                         </div>
-                        <div className="todo-delete text-end"><button onClick={() => deleteTodoItem(todo.id)}>X</button></div>
+                        <div className="todo-delete text-end"><button onClick={() => deleteTodoItem(todo)}>X</button></div>
                     </div>
                 );
             })}

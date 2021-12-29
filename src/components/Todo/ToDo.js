@@ -25,7 +25,9 @@ function ToDo() {
     }, []);
 
     const increment = () => {
-        setCount(count - 1);
+        if (count >= 1) {
+            setCount(count - 1);
+        }
     }
     const onSubmit = (onSubmit) => {
         console.log('onSubmit', onSubmit);

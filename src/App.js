@@ -1,7 +1,6 @@
 import WorldClock from './components/WorldClock/WorldClock';
-import Modal from './components/Modal';
 import ToDo from './components/Todo/ToDo';
-import BookMark from './components/Bookmark';
+import BookMark from './components/Bookmark/Bookmark';
 import Notes from './components/Notes/Notes';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';

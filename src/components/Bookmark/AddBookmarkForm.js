@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import { addBookmark } from "../redux/actions";
+import { addBookmark } from "../../redux/actions";
 
 function AddBookmarkForm() {
 
