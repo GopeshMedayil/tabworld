@@ -40,7 +40,7 @@ function WorldClock() {
                 <p className="card-subtitle mb-2 text-muted">{tz.tz}</p>
             </div>
             <div className="text-right">
-                <Moment format="hh:mm:ss" tz={tz.tz}>
+                <Moment format="hh:mm A" tz={tz.tz}>
                     {currentTime}
                 </Moment>
             </div >

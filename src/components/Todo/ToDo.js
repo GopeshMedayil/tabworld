@@ -18,7 +18,8 @@ function ToDo() {
         if (todos) {
             todos = JSON.parse(todos);
             console.log("TTOTOTO", todos.todoReducer.todos);
-            setCount(todos.todoReducer.todos.length);
+            let filteredTodos = todos.todoReducer.todos.filter(todo => todo.completed === false);
+            setCount(filteredTodos.length);
         }
         // console.log("tooo", todos)
         // setCount(todos.length);
@@ -33,7 +34,7 @@ function ToDo() {
         console.log('onSubmit', onSubmit);
         dispatch(addTodo({
             title: onSubmit.name,
-            id: onSubmit.id,
+            id: Date.now(),
             completed: false
         }));
         setCount(count + 1);
@@ -49,7 +50,7 @@ function ToDo() {
                 <div className="todo-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="form-control" autoComplete="off" placeholder="Add your new todo" {...register("name")} />
-                        <input type="hidden" defaultValue={Date.now()} {...register('id')} />
+                        <input type="text" defaultValue={Date.now()} {...register('id')} />
                         <button>+</button>
                     </form>
                 </div>

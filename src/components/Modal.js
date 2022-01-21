@@ -23,7 +23,7 @@ const Modal = (props) => {
                     <span className="modal-close" onClick={onCloseButtonClick}>
                         &#10005; {/* HTML code for a multiplication sign */}
                     </span>
-                    {modalState.modalType === 'addClock' ? <AddClockForm /> : <div><AddBookmarkForm></AddBookmarkForm></div>}
+                    {modalState.modalType === 'addClock' ? <AddClockForm /> : <div><AddBookmarkForm close={onCloseButtonClick}></AddBookmarkForm></div>}
                 </div>
             </div>
 

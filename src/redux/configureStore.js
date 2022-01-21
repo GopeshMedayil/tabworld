@@ -11,12 +11,12 @@ const reducer = combineReducers({
   timeZones,
   modalReducer,
   todoReducer,
-  bookmarkReducer,
+  bookmark: bookmarkReducer,
   notesReducer
 });
 const persistedState = loadState();
 
-const store = createStore(reducer, persistedState);
+const store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 console.log("Actual state ", store.getState());
 store.subscribe(() => {
