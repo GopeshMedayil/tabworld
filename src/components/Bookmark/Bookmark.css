@@ -1,13 +1,27 @@
-.bookmark-container{
-    display: flex;
+.bookmark-container {
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
 }
 
-.bookmark-text{
+.bookmark-text {
     width: 650px;
 }
-.bookmark-add{
+
+.bookmark-add {
     font-size: 25px;
     padding: 5px;
     cursor: pointer;
+}
+
+.bookmark-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.bookmark-title {
+    text-align: center;
+    flex-basis: 90%;
+    padding-top: 10px;
 }

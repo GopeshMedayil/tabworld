@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Moment from "react-moment";
 import "moment-timezone";
 import { useSelector, useDispatch } from "react-redux";
@@ -75,4 +75,4 @@ function WorldClock() {
     );
 }
 
-export default WorldClock;
+export default React.memo(WorldClock);

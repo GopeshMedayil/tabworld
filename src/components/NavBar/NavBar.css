@@ -31,6 +31,7 @@
     font-size: 20px;
     border-radius: 14px;
     margin:15px;
+    transition: all .2s ease-in-out;
 }
 .navbar-item p{
     color:white;
@@ -43,4 +44,10 @@
 }
 .nav-bookmark{
     background:violet;
+}
+
+.navbar-item:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+
 }
