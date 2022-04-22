@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addNotes } from "../../redux/actions";
+import Header from '../Header/Header';
 import NotesList from './NotesList';
 
 function Notes() {
@@ -18,9 +19,10 @@ function Notes() {
 
     return (
         <React.Fragment>
-            <div className="container">
-                <h4 className="text-center text-muted p-2">Draft your ideas here !!</h4>
-                <div className="row align-items-end">
+            <div className="">
+                {/* <h4 className="text-center text-muted p-2">Draft your ideas here !!</h4> */}
+                <Header title="Draft your ideas here !!" showButton={false} borderColor="#97ed97"></Header>
+                <div className="row align-items-end" style={{ 'padding': '10px' }}>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 

@@ -12,19 +12,6 @@
     cursor: pointer;
 }
 
-.bookmark-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: space-between;
-}
-
-.bookmark-title {
-    text-align: center;
-    flex-basis: 90%;
-    padding-top: 10px;
-}
 .bookmark-list{
     display: flex;
     flex-wrap: wrap;

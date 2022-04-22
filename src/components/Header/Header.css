@@ -13,5 +13,6 @@
     text-align: center;
     flex-basis: 90%;
     padding-top: 10px;
-    margin:5px
+    margin:5px;
+    font-weight: bold;
 }
