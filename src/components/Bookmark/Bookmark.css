@@ -1,5 +1,5 @@
 .bookmark-container {
-    box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+    /* box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px; */
 }
 
 .bookmark-text {
@@ -21,9 +21,10 @@
 }
 
 .bookmark-item{
-    flex-basis:33.33%;
-    border:1px solid red;
-    height:150px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; 
+    flex-basis: 22%;
+    /* border: 1px solid red; */
+    height: 150px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
     word-break: break-all;
+    margin: 10px;
 }
