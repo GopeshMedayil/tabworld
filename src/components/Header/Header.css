@@ -1,0 +1,17 @@
+.common-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    border-top: 5px solid violet;
+    margin-bottom: 10px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+}
+
+.header-title {
+    text-align: center;
+    flex-basis: 90%;
+    padding-top: 10px;
+    margin:5px
+}
