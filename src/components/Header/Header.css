@@ -4,7 +4,7 @@
     flex-direction: row;
     align-content: space-between;
     justify-content: space-between;
-    border-top: 5px solid violet;
+    border-bottom: 5px solid violet;
     margin-bottom: 10px;
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
 }

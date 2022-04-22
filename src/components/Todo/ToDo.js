@@ -5,6 +5,7 @@ import TodoList from "../Todo/TodoList";
 import "./Todo.css"
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Header from "../Header/Header";
 
 function ToDo() {
 
@@ -47,6 +48,7 @@ function ToDo() {
     return (
         <div>
             <div className="todo-container">
+                <Header title="ToDo" showButton={false} borderColor="blue"></Header>
                 <div className="todo-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="form-control" autoComplete="off" placeholder="Add your new todo" {...register("name")} />

@@ -8,10 +8,17 @@ import Header from "../Header/Header";
 function BookMark() {
 
     const dispatch = useDispatch();
+    const clickButton = () => {
+        dispatch(showModal({
+            showModal: true,
+            modalType: "addBookmark"
+        }));
+    }
+
     return (
         <div>
             <div className="bookmark-container">
-                <Header title="Bookmarks" showButton="true"></Header>
+                <Header title="Bookmarks" showButton={true} borderColor="violet" method={clickButton}></Header>
                 {/* <div className="bookmark-header">
                     <div className="bookmark-title">
                         <span>Bookmarks</span>
