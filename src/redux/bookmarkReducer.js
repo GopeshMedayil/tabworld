@@ -18,8 +18,6 @@ export default function bookmarkReducer(state = initialState, action) {
                 bookmarks: state.bookmarks.filter(bookmark => bookmark.id !== action.payload)
             }
         default:
-            return {
-                bookmarks: []
-            }
+            return state;
     }
 }
