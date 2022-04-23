@@ -51,7 +51,7 @@ function ToDo() {
                 <Header title="ToDo" showButton={false} borderColor="blue"></Header>
                 <div className="todo-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input className="form-control" autoComplete="off" placeholder="Add your new todo" {...register("name")} />
+                        <input className="form-control" autoComplete="off" required placeholder="Add your new todo" {...register("name")} />
                         <input type="hidden" defaultValue={Date.now()} {...register('id')} />
                         <button>+</button>
                     </form>
