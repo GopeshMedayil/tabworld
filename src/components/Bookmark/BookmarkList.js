@@ -3,40 +3,34 @@ import './Bookmark.css';
 function BookmarkList() {
     return (
         <div className="bookmark-list">
-            <div className="bookmark-item">
-                <div className="p-2">
-                    <div>G</div>
-                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                        Google
-                    </a>
+            <div class="bookmark-item">
+                <div className="item-warpper">
+                    <div className="initial-letter">G</div>
+                    <div className="item-link">Google</div>
                 </div>
             </div>
-            <div className="bookmark-item">
-                <div className="p-2">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                    </a>
+            <div class="bookmark-item">
+                <div className="item-warpper">
+                    <div className="initial-letter">G</div>
+                    <div className="item-link">Google</div>
                 </div>
             </div>
-            <div className="bookmark-item">
-                <div className="p-2">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                    </a>
+            <div class="bookmark-item">
+                <div className="item-warpper">
+                    <div className="initial-letter">G</div>
+                    <div className="item-link">Google</div>
                 </div>
             </div>
-            <div className="bookmark-item">
-                <div className="p-2">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                    </a>
+            <div class="bookmark-item">
+                <div className="item-warpper">
+                    <div className="initial-letter">G</div>
+                    <div className="item-link">Google</div>
                 </div>
             </div>
-            <div className="bookmark-item">
-                <div className="p-2">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                    </a>
+            <div class="bookmark-item">
+                <div className="item-warpper">
+                    <div className="initial-letter">G</div>
+                    <div className="item-link">Google</div>
                 </div>
             </div>
         </div>
