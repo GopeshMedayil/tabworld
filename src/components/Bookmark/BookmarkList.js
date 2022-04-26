@@ -5,6 +5,7 @@ function BookmarkList() {
         <div className="bookmark-list">
             <div className="bookmark-item">
                 <div className="p-2">
+                    <div>G</div>
                     <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
                         Google
                     </a>
