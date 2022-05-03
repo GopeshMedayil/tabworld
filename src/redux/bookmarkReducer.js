@@ -9,13 +9,13 @@ const initialState = {
 export default function bookmarkReducer(state = initialState, action) {
     switch (action.type) {
         case 'ADD_BOOKMARK':
-            console.log("inside reducer bookmark", action)
+            console.log("inside reducer bookmark", action);
             return {
                 bookmarks: [...state.bookmarks, action.payload]
             }
         case 'DELETE_BOOKMARK':
             return {
-                bookmarks: state.bookmarks.filter(bookmark => bookmark.id !== action.payload)
+                bookmarks: state.bookmarks.filter(bookmark => bookmark.id !== action.payload.id)
             }
         default:
             return state;

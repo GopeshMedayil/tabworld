@@ -1,18 +1,26 @@
 import './Bookmark.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function BookmarkList() {
-
+    const dispatch = useDispatch();
     const bookmarks = useSelector(state => state.bookmark.bookmarks);
-    const deleteBookmark = () => {
+    const deleteBookmark = (bookMarkId) => {
         console.log('deleteBookmark');
+        dispatch({
+            type: 'DELETE_BOOKMARK',
+            payload: {
+                id: bookMarkId
+            }
+
+        })
+
     };
 
     const bookmarkList = () => {
         return bookmarks.map(bookmark => (
             <div key={bookmark.id} className="bookmark-item">
                 <div>
-                    <i className="bi bi-x-lg float-end px-2" onClick={deleteBookmark}></i>
+                    <i className="bi bi-x-lg float-end px-2" onClick={() => deleteBookmark(bookmark.id)}></i>
                 </div>
 
                 <div className="item-warpper">
