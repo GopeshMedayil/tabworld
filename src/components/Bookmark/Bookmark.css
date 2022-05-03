@@ -30,6 +30,10 @@
     flex-direction: column;
     transition: box-shadow 0.3s ease-in-out;
 }
+.bookmark-item a{
+    text-decoration: none;
+    color:white;
+}
 .bookmark-item:hover{
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
@@ -38,6 +42,7 @@
     display: flex;
     align-content: stretch;
     flex-direction: column;
+    width:100%;
 }
 .initial-letter{
     width: 100%;
@@ -50,6 +55,7 @@
     font-weight: bold;
     font-size: 35px;
     text-transform: capitalize;
+    color:blue;
 }
 .item-link{
     margin-top: auto;
@@ -61,6 +67,8 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+
 .empty-list{
     display:flex;
     align-items: center;
